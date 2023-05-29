@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo troco</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            background-color: rgb(214, 214, 214);
+            padding: 30px;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o troco</h1>
+    <div onclick="calc()">Comprar produto</div>
+
+    <script>
+        function calc(){
+            var item = window.prompt('Que produto você está comprando?')
+            var preco = parseFloat(window.prompt(`Quanto custa o(a) ${item} que você está comprando? (Se precisar, escreva a unidade dos centavos usando um ponto ao invés da vírgula)`))
+            var valor = parseFloat(window.prompt(`Qual foi o valor que você deu para pagar o(a) ${item}? (Se precisar, escreva a unidade dos centavos usando um ponto ao invés da vírgula)`))
+
+            var res1 = valor - preco.toFixed(2)
+            var res2 = preco - valor.toFixed(2)
+            
+
+            if(valor >= preco){
+                window.alert(`Você comprou o(a) ${item} que custou R$${preco.toFixed(2)}.\nDeu R$${valor.toFixed(2)} em dinheiro e vai receber R$${res1.toFixed(2)} de troco.\nVolte sempre!`)
+            }else{
+                window.alert(`O valor que você inseriu não é o suficiente para comprar o produto. Faltam R$${res2.toFixed(2)}!`)
+            }
+        }
+    </script>
+    
+</body>
+</html>
