@@ -6,7 +6,7 @@ function calc(){
     var res = Number( preco - desc )
 
     if(preco == 0){
-        window.alert('[ERRO] Informe um valor para converter')
+        window.alert('[ERRO] Informe um valor para descontar')
     }else{
         text.innerHTML = `Calculando desconto de 10% para ${nome}`
 
