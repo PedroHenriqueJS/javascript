@@ -49,7 +49,7 @@ function calc(){
             res.innerHTML = `Detectamos uma menina de ${idade} anos`
             img.innerHTML = "<img src= './assets/criancaF.jpg'>"
         }else if(sexo[1] && idade <= 20){
-            res.innerHTML = `Detectamos uma adolescente de ${idade} anos`
+            res.innerHTML = `Detectamos um adolescente de ${idade} anos`
             img.innerHTML = "<img src='./assets/adolescenteF.jpg'>"
         }
         else if(sexo[1] && idade <= 40){
